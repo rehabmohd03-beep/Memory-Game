@@ -1,0 +1,40 @@
+1- create index.html
+ write title and h1 name of  the  game
+ welcom page to start game
+click on start move to nect page
+2- create index2.html
+add images for cards
+add div
+add class and id names
+button to resters game
+
+
+3- craete css style
+
+size of cards width and height
+background color
+font size and color
+rows and colums gap between cards
+design hide backface
+
+4- create script
+ write all variables
+ button
+Show all cards face down
+Set moves = 0
+elememt add
+card
+ for each loop
+  firstCard and secondCard
+Player tries again
+ and add if
+funications
+
+function to rester game
+If firstCard image == secondCard image
+  Cards are matched
+  Keep cards hidden / removed
+  Increase score
+
+Else:
+ choess agin two images
