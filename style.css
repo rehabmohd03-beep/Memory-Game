@@ -28,7 +28,7 @@ h2{
 }
 
 .board{
-    padding:20px;
+    padding:18px;
     display:grid;
     grid-template-columns:repeat(4, 1fr);
     gap:18px;
@@ -125,5 +125,6 @@ text-align: center;
     border: 3px solid green;
     border-radius: 12px;
 }
+
 
 
