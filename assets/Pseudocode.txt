@@ -93,4 +93,4 @@ Stop the timer.
 
 Save moveCount and seconds to localStorage.
 
-display the user to win.html
+display the user to  win.html
