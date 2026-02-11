@@ -91,6 +91,8 @@ If count equals 16 (all cards matched):
 
 Stop the timer.
 
+ and play loss music
+
 Save moveCount and seconds to localStorage.
 
 display the user to  win.html
