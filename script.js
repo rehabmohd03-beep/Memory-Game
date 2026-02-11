@@ -13,7 +13,7 @@ let lockBoard = false
 let moveCount = 0 // add zero to start from zero and increases
 let seconds = 60 // start number 60 and decrease
 let clock = null
-
+// variable musics
 let winMusic;
 let lossMusic;
 // https://www.w3schools.com/graphics/game_sound.asp link reference for music code
