@@ -1,9 +1,9 @@
 # Memory-Game
-this project 1 of software engineering
+ Project 1 of software engineering
 
 ## Date: 2/5/2026
 
-### By: Rehab Mohamed 
+### By: Rehab Mohamed Ali
 
 #### [GitHub](https://github.com/rehabmohd03-beep/Memory-Game.git)
 
