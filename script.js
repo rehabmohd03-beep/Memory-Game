@@ -14,6 +14,16 @@ let moveCount = 0 // add zero to start from zero and increases
 let seconds = 60 // start number 60 and decrease
 let clock = null
 
+let winMusic;
+let lossMusic;
+// https://www.w3schools.com/graphics/game_sound.asp link reference for music code
+
+function startMusic() {
+     //https://pixabay.com/sound-effects/search/victory/?pagi=2 link for win music
+    winMusic = new sound("assets/winMusic.mp3");
+    //https://pixabay.com/sound-effects/search/lose/ link for web loss music
+    lossMusic = new sound("assets/lossMusic.mp3");
+}
 //crate function name mix Cards with one parameter name arr each time random cards
 
 
@@ -62,7 +72,9 @@ function startTimer() {
     if (seconds <= 0) {
       // stop game
       lockBoard = true;
-
+     if(lossMusic) {
+          lossMusic.play();
+      }
     const header2 = document.querySelector('h2');
        header2.textContent = " The time is finish try play again";
        header2.style.color = "red";
@@ -83,6 +95,7 @@ function startPlay() {
   seconds = 60 // start seconds 60
   openCard = null; // delete any open card
   lockBoard = false;
+   startMusic();
   playBoard.classList.remove('hidden'); // is remove board if second equel zero
   const header2 = document.querySelector('h2')
   header2.textContent = "Start Play Memory Card Game";
@@ -93,6 +106,8 @@ function startPlay() {
  // calls functions
   buildBoard();
   startTimer();
+
+
 }
  // crate handle flip with one parmeter name card
 const handleFlip = (card) => {
@@ -118,6 +133,8 @@ function checkCards(secondCard) {
   const isMatch = openCard.innerHTML === secondCard.innerHTML;
    // if two card match open card is null and finish
   if (isMatch) {
+    openCard.classList.add('matched');
+    secondCard.classList.add('matched');
     openCard = null;
     checkFinish();
     //if is not match remove two card open and second
@@ -138,8 +155,12 @@ function checkFinish() {
   const matchedCards = document.querySelectorAll('.card.flipped').length;
   // add eight emojis in array  and * 2 to make total number of cards is 16
   if (matchedCards === emojis.length * 2) {
+     //  start music
+      if(winMusic)
+        { winMusic.play();}
 
     clearInterval(clock);
+
     // store result moves and time
 
     localStorage.setItem('moves', moveCount);
@@ -148,9 +169,21 @@ function checkFinish() {
     setTimeout(() => {
       // go to other page name index.html
       //display result
-      window.location.href = "win.html";
-    }, 500);
+      window.location.href = "assets/win.html";
+    }, 6000);
   }
 }
 // when click on start button display board
 startButton.onclick = startPlay;
+
+function sound(src) {
+    this.sound = new Audio(src);
+
+    this.play = function() {
+        this.sound.play();
+    }
+
+    this.stop = function() {
+        this.sound.pause();
+    }
+}
