@@ -3,7 +3,7 @@ this project 1 of software engineering
 
 ## Date: 2/5/2026
 
-### By: Rehab Mohamed Ali
+### By: Rehab Mohamed 
 
 #### [GitHub](https://github.com/rehabmohd03-beep/Memory-Game.git)
 
