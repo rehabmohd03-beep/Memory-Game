@@ -72,6 +72,7 @@ function startTimer() {
     if (seconds <= 0) {
       // stop game
       lockBoard = true;
+      // start loss music play 
      if(lossMusic) {
           lossMusic.play();
       }
