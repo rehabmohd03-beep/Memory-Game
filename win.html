@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Win Page </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div class="end-game">
+<h3> Good Work You Win</h3>
+    <p>Moves: <span id="moves"></span></p>
+    <p>Time: <span id="time"></span> sec</p>
+
+
+  <script>
+    document.getElementById('moves').textContent =
+      localStorage.getItem('moves')
+
+    document.getElementById('time').textContent =
+      localStorage.getItem('time')
+      </script>
+
+  <form action="index.html">
+  <button type="submit">Play Again</button>
+</form>
+</div>
+
+
+</body>
+</html>

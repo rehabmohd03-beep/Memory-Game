@@ -8,7 +8,7 @@ this project 1 of software engineering
 #### [GitHub](https://github.com/rehabmohd03-beep/Memory-Game.git)
 
 ### ***Description***
-#### A brief description of the project The game contains 16 cards. All cards are turned face down, and you choose two. If the two cards have the same image, they disappear and you score a point. Then you move on to the other cards until all the cards match and you win the game.
+#### A brief description of the project The game contains 16 cards. All cards are turned face down, and you choose two. If the two cards have the same emoji , they disappear and you moves a point. Then you move on to the other cards until all the cards match and you win the game and have timer 55 second if time equal zero the board is Stop and try play game again because time finish.
 ***
 
 ### ***Technologies Used***
@@ -20,7 +20,13 @@ this project 1 of software engineering
 
 ### ***Getting Started***
 
-##### Click on two images
+##### Click on Start play
+##### Display board game
+##### Click on two emoji
+##### Each time click two emoji the moves increase one
+##### Have timer decrease start 60 seconds
+##### if finish open all cards you win and Display another page
+##### if time is finish and you don't finish all cards the board Stop and try play again
 
 
 ***
@@ -28,13 +34,14 @@ this project 1 of software engineering
 ### ***Screenshots***
 
 ##### image header 1
-![memory](https://app.diagrams.net/?src=about)
+![emojis] (https://emojipedia.org/)
 
 ***
 
 ### ***Future Updates***
-- [ ] add more images
-- [x] Creating a level 2  for the game
+- [ ] Creating a level 2  for the game
+- [ ] Add dark mode
+- [x] Add emojis more
 
 ***
 
@@ -45,4 +52,6 @@ this project 1 of software engineering
 ##### Markdown Guide: [ia.net](https://ia.net/writer/support/general/markdown-guide)
 
 ##### Markdown Cheatsheet: [GitHub](https://github.com/rehabmohd03-beep/Memory-Game.git)
+
+##### Emojis : [emojipedia](https://emojipedia.org/)
 ***

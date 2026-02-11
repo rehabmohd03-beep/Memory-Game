@@ -1,40 +1,96 @@
-1- create index.html
- write title and h1 name of  the  game
- welcom page to start game
-click on start move to nect page
-2- create index2.html
-add images for cards
-add div
-add class and id names
-button to resters game
+1. (HTML)
+Main Game Page (index.html)
 
+Create a header (h2) for the game title.
 
-3- craete css style
+ display the current moves count and the timer
 
-size of cards width and height
-background color
-font size and color
-rows and colums gap between cards
-design hide backface
+Create a Board Container that holds an empty div the board where cards
 
-4- create script
- write all variables
- button
-Show all cards face down
-Set moves = 0
-elememt add
-card
- for each loop
-  firstCard and secondCard
-Player tries again
- and add if
-funications
+Add a Start Button
 
-function to rester game
-If firstCard image == secondCard image
-  Cards are matched
-  Keep cards hidden / removed
-  Increase score
+Win Game  Page (win.html)
 
-Else:
- choess agin two images
+Display a message "Good Work You Win"
+
+Create  (span tags) to inject the final Moves and Time from localStorage.
+
+Add a Play Again button back to the game page(index.html)
+
+2. Design (CSS)
+Card  Define fixed dimensions (width/height) for cards and use Grid or Flex box on the board to align them in rows and columns.
+
+Card States Use backface-visibility: hidden to handle the flipping effect.
+
+Design a .flipped class to rotate the card and reveal the emoji.
+
+Game State: Create a .hidden class to hide the board when the timer reaches zero.
+
+3.  (JavaScript)
+add  Variables
+Select HTML elements using querySelector.
+
+ an array of emojis 8 numbers
+
+Set  variables: openCard (null), lockBoard (false), moveCount (0), and seconds (60).
+
+Functions
+Function: mixCards(array)
+
+Loop through the array from the end to the beginning, swapping each element with a randomly selected one.
+
+Function: buildBoard()
+
+Clear the existing board content.
+
+Duplicate the emoji array to create 8 (16 cards).
+
+Shuffle the paired array using mixCards.
+
+Loop  shuffled array:
+
+Create a div element for each card.
+
+using HTML (front face and back face the emoji).
+
+ click event listener to trigger handleFlip.
+
+Append the card to the playBoard.
+
+Function: startTimer()
+
+Reset any existing clock intervals.
+
+Loop/Interval: Decrease seconds every 1000ms.
+
+If seconds <= 0: Lock the board, hide  and stop the timer.
+
+Function: handleFlip(card)
+
+If board is locked or card is already flipped: Exit.
+
+Add the .flipped class to the card.
+
+If this is the first card: Store it in openCard.
+
+If this is the second card: Increase moveCount and call checkCards.
+
+Function: checkCards(secondCard)
+
+Compare the inner HTML of openCard and secondCard.
+
+If Match: Reset openCard to null and run checkFinish.
+
+Else (No Match): Lock the board, wait 800ms, remove the .flipped class from both cards, then unlock.
+
+Function: checkFinish()
+
+Count all elements with the class .card.flipped.
+
+If count equals 16 (all cards matched):
+
+Stop the timer.
+
+Save moveCount and seconds to localStorage.
+
+display the user to win.html
