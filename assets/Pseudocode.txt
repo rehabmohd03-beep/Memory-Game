@@ -34,6 +34,9 @@ Select HTML elements using querySelector.
 
 Set  variables: openCard (null), lockBoard (false), moveCount (0), and seconds (60).
 
+add function to start music
+if you win start win music and if loss start loss music
+
 Functions
 Function: mixCards(array)
 
