@@ -28,9 +28,9 @@ function startMusic() {
 
 
 //crate function name mix Cards with one parameter name arr each time random cards
-// sort
+// sort is max cards
 function mixCards(arr) {
-  return arr.sort(() => Math.random() - 0.5);
+  return arr.sort(() => Math.random())
 }
 // crate function name build Board
 function buildBoard() {
@@ -44,7 +44,7 @@ function buildBoard() {
     card.className = 'card' // create class
     // add code html class name card-front and class name card-back
     card.innerHTML = // add card two face front and back
-    
+
   '<div class="card-front"></div>' +
   '<div class="card-back">' + cards[i] + '</div>'
   // when click on card is flip to show emoji
